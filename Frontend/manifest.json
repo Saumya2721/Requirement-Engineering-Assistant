@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "AI Requirement Engineering Assistant",
+  "version": "1.0",
+  "description": "Real-time ambiguity detection, clarification questioning, and requirement synthesis for live meetings.",
+  "permissions": ["activeTab", "storage"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Requirement Assistant"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://meet.google.com/*",
+        "https://*.zoom.us/*"
+      ],
+      "js": ["content.js"]
+    }
+  ]
+}

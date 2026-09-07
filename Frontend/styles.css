@@ -1,0 +1,38 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  width: 440px;
+  height: 580px;
+  margin: 0;
+  padding: 12px;
+  background: #f8fafc;
+  color: #1e293b;
+  display: flex;
+  flex-direction: column;
+}
+.header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+.header h2 { margin: 0; font-size: 16px; color: #0f172a; }
+.badge { background: #dcfce7; color: #166534; font-size: 11px; padding: 2px 8px; border-radius: 12px; }
+.tabs { display: flex; gap: 6px; margin-bottom: 10px; }
+.tab-btn { flex: 1; padding: 6px; border: 1px solid #cbd5e1; background: #fff; border-radius: 6px; cursor: pointer; font-size: 12px; }
+.tab-btn.active { background: #2563eb; color: #fff; border-color: #2563eb; }
+.tab-content { display: none; flex-direction: column; flex: 1; overflow-y: auto; }
+.tab-content.active { display: flex; }
+.section-title { font-size: 12px; font-weight: 600; color: #64748b; margin: 8px 0 4px 0; text-transform: uppercase; }
+.scroll-box { height: 90px; background: #fff; border: 1px solid #e2e8f0; border-radius: 6px; padding: 6px; overflow-y: auto; font-size: 12px; }
+.scroll-box-large { flex: 1; min-height: 180px; background: #fff; border: 1px solid #e2e8f0; border-radius: 6px; padding: 8px; overflow-y: auto; font-size: 12px; }
+.simulation-box { display: flex; flex-direction: column; gap: 4px; margin-top: 6px; }
+textarea { width: 95%; height: 36px; border: 1px solid #cbd5e1; border-radius: 4px; padding: 4px; font-size: 12px; resize: none; }
+button { cursor: pointer; border-radius: 4px; border: none; font-size: 12px; font-weight: 500; }
+.btn-primary { background: #2563eb; color: #fff; padding: 6px; margin-top: 2px; }
+.btn-secondary { background: #e2e8f0; color: #334155; padding: 4px; }
+.btn-action { background: #16a34a; color: #fff; padding: 8px; border-radius: 6px; margin-top: 8px; font-weight: bold; }
+.card { background: #fff; border: 1px solid #e2e8f0; border-left: 4px solid #f59e0b; padding: 8px; margin-bottom: 6px; border-radius: 4px; }
+.card p { margin: 0 0 4px 0; font-size: 12px; }
+.card input { width: 92%; padding: 4px; font-size: 11px; margin-bottom: 4px; border: 1px solid #cbd5e1; border-radius: 3px; }
+.card button { background: #0284c7; color: #fff; padding: 4px 8px; }
+.comparison-grid { display: flex; gap: 8px; margin-bottom: 10px; }
+.score-card { flex: 1; background: #fff; padding: 6px; border-radius: 6px; border: 1px solid #e2e8f0; font-size: 11px; }
+.score-card.highlight { border-color: #22c55e; background: #f0fdf4; }
+.score-card h4 { margin: 0 0 4px 0; font-size: 12px; }
+.export-bar { display: flex; align-items: center; gap: 6px; margin-bottom: 8px; font-size: 12px; }
+.export-btn { background: #475569; color: #fff; padding: 4px 10px; }

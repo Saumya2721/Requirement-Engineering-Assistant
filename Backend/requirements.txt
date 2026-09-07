@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+langchain
+langchain-core
+langchain-google-genai
+langgraph
+pydantic
+python-dotenv
+reportlab
+python-docx
+langchain-groq
+slowapi
