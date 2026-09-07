@@ -17,36 +17,36 @@ The tool continuously monitors spoken dialogue, detects ambiguous or incomplete 
 
 ```mermaid
 flowchart TD
-    subgraph Browser ["Client (Browser & Meeting)"]
-        Meet["Google Meet / Zoom Web\n(Live Closed Captions)"]
-        ContentScript["content.js\n(MutationObserver)"]
-        Popup["popup.js / popup.html\n(Chrome Extension)"]
+    subgraph Browser ["Client: Browser & Meeting"]
+        Meet["Google Meet / Zoom Web<br/>Live Closed Captions"]
+        ContentScript["content.js<br/>MutationObserver"]
+        Popup["popup.js / popup.html<br/>Chrome Extension"]
         Meet -->|DOM Captions| ContentScript
         ContentScript -->|Runtime Messaging| Popup
     end
 
     subgraph Backend ["FastAPI Engine"]
-        Router["routers.py\n(/api/analyze-turn, /api/synthesize, /api/export)"]
-        Limiter["limiter.py\n(SlowAPI Rate Limiting)"]
-        Auth["dependencies.py\n(API Key Verification)"]
+        Router["routers.py<br/>API Endpoints"]
+        Limiter["limiter.py<br/>SlowAPI Rate Limiter"]
+        Auth["dependencies.py<br/>API Key Verification"]
         
         Router --> Limiter
         Router --> Auth
     end
 
     subgraph LLMLayer ["LLM & Agent Pipelines"]
-        Groq["Groq (compound)\nLow-latency turn analysis"]
-        LangGraph["LangGraph Workflow (Gemini)\n1. Baseline Extraction\n2. Refined Extraction\n3. Evaluation & Comparative Scoring"]
+        Groq["Groq: compound<br/>Real-Time Ambiguity Detection"]
+        LangGraph["LangGraph Workflow: Gemini<br/>1. Baseline Extraction<br/>2. Refined Extraction<br/>3. Evaluation & Scoring"]
     end
 
-    Popup -->|Turn Exchange (Q&A)| Router
+    Popup -->|"Turn Exchange (Q&A)"| Router
     Router -->|Ambiguity Check| Groq
     Groq -->|Clarification Question| Popup
 
     Popup -->|Finalize & Synthesize| Router
     Router -->|Execute Pipeline| LangGraph
     LangGraph -->|FR/NFR + Metrics| Popup
-    Router -->|Generate PDF / DOCX| Export["ReportLab / python-docx"]
+    Router -->|Generate Document| Export["ReportLab / python-docx Export"]
 ```
 
 ---
