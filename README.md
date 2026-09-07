@@ -1,12 +1,5 @@
 # AI Requirement Engineering Assistant
 
-[![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com)
-[![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=flat&logo=chainlink&logoColor=white)](https://www.langchain.com)
-[![LangGraph](https://img.shields.io/badge/LangGraph-FF6F00?style=flat)](https://langchain-ai.github.io/langgraph/)
-[![Chrome Extension](https://img.shields.io/badge/Chrome_Extension-Manifest_V3-4285F4?style=flat&logo=googlechrome&logoColor=white)](https://developer.chrome.com/docs/extensions/mv3/)
-[![Groq](https://img.shields.io/badge/Groq-Fast_Inference-F55036?style=flat)](https://groq.com)
-[![Google Gemini](https://img.shields.io/badge/Google_Gemini-3.5_Flash-8E75C2?style=flat&logo=google&logoColor=white)](https://deepmind.google/technologies/gemini/)
-
 An end-to-end, real-time AI assistant for software requirements elicitation during stakeholder meetings (Google Meet, Zoom Web). 
 
 The tool continuously monitors spoken dialogue, detects ambiguous or incomplete statements on-the-fly, prompts stakeholders with targeted clarification questions, and synthesizes testable Functional Requirements (FR) and categorized Non-Functional Requirements (NFR) through a multi-agent LangGraph workflow.
